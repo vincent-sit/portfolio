@@ -1,0 +1,33 @@
+<mxfile host="65bd71144e">
+    <diagram id="urF-1wc8r2AjxdNRL-ab" name="Page-1">
+        <mxGraphModel dx="970" dy="601" grid="1" gridSize="10" guides="1" tooltips="1" connect="1" arrows="1" fold="1" page="1" pageScale="1" pageWidth="850" pageHeight="1100" math="0" shadow="0">
+            <root>
+                <mxCell id="0"/>
+                <mxCell id="1" parent="0"/>
+                <mxCell id="3" value="Application" style="swimlane;whiteSpace=wrap;html=1;" vertex="1" parent="1">
+                    <mxGeometry x="40" y="40" width="760" height="560" as="geometry"/>
+                </mxCell>
+                <mxCell id="5" value="Display" style="swimlane;whiteSpace=wrap;html=1;" vertex="1" parent="3">
+                    <mxGeometry x="80" y="60" width="600" height="320" as="geometry"/>
+                </mxCell>
+                <mxCell id="7" value="Page - each page responds differently to the signals" style="rounded=0;whiteSpace=wrap;html=1;" vertex="1" parent="5">
+                    <mxGeometry x="40" y="60" width="520" height="120" as="geometry"/>
+                </mxCell>
+                <mxCell id="8" style="edgeStyle=none;html=1;entryX=0.5;entryY=1;entryDx=0;entryDy=0;" edge="1" parent="3" source="6" target="7">
+                    <mxGeometry relative="1" as="geometry"/>
+                </mxCell>
+                <mxCell id="9" value="On button press, send signal to listeners" style="edgeLabel;html=1;align=center;verticalAlign=middle;resizable=0;points=[];" vertex="1" connectable="0" parent="8">
+                    <mxGeometry x="0.28" y="2" relative="1" as="geometry">
+                        <mxPoint as="offset"/>
+                    </mxGeometry>
+                </mxCell>
+                <mxCell id="6" value="Buttons" style="rounded=0;whiteSpace=wrap;html=1;" vertex="1" parent="3">
+                    <mxGeometry x="40" y="440" width="200" height="80" as="geometry"/>
+                </mxCell>
+                <mxCell id="10" value="The button collection needs to add the current page as an observer, so when the buttons are pressed, they can notify the pages" style="text;html=1;align=center;verticalAlign=middle;resizable=0;points=[];autosize=1;strokeColor=none;fillColor=none;" vertex="1" parent="3">
+                    <mxGeometry x="40" y="520" width="700" height="30" as="geometry"/>
+                </mxCell>
+            </root>
+        </mxGraphModel>
+    </diagram>
+</mxfile>
