@@ -29,10 +29,10 @@ interface ActionPadProps {
 export function ActionPad({ state, reset } : ActionPadProps) {
     return (
         <Controller>
-            <Button onClick={() => state.currentPage.confirm?.()} actionable={typeof state.currentPage.confirm !== 'undefined'}>
+            <Button onClick={() => state.currentPage.confirm?.()} $actionable={typeof state.currentPage.confirm !== 'undefined'}>
                 <i className="material-icons">radio_button_checked</i>
             </Button>
-            <Button onClick={reset} actionable={true}>
+            <Button onClick={reset} $actionable={true}>
                 <i className="material-icons">home</i>
             </Button>
         </Controller>

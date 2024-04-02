@@ -1,5 +1,5 @@
 import React from 'react';
-import { HomePageState, createHomePageState } from './state';
+import { createHomePageState } from './state';
 import { Page } from '../base/action';
 import { HomePresenter } from './presenter';
 import { HomePage as InternalHomePage } from './home-page';

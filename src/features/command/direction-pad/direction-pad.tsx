@@ -1,6 +1,5 @@
 import React from 'react';
 import styled from 'styled-components';
-import { Page } from '../../base/action';
 import { Button } from '../button/ui';
 import { PageState } from '../../page/state';
 
@@ -39,16 +38,16 @@ interface DirectionPadProps {
 export function DirectionPad({ state } : DirectionPadProps) {
     return (
         <Controller>
-            <Button onClick={() => state.currentPage.up?.()} actionable={typeof state.currentPage.up !== 'undefined'}>
+            <Button onClick={() => state.currentPage.up?.()} $actionable={typeof state.currentPage.up !== 'undefined'}>
                 <i className="material-icons">arrow_drop_up</i>
             </Button>
-            <Button onClick={() => state.currentPage.down?.()} actionable={typeof state.currentPage.down !== 'undefined'}>
+            <Button onClick={() => state.currentPage.down?.()} $actionable={typeof state.currentPage.down !== 'undefined'}>
                 <i className="material-icons">arrow_drop_down</i>
             </Button>
-            <Button onClick={() => state.currentPage.left?.()} actionable={typeof state.currentPage.left !== 'undefined'}>
+            <Button onClick={() => state.currentPage.left?.()} $actionable={typeof state.currentPage.left !== 'undefined'}>
                 <i className="material-icons">arrow_left</i>
             </Button>
-            <Button onClick={() => state.currentPage.right?.()} actionable={typeof state.currentPage.right !== 'undefined'}>
+            <Button onClick={() => state.currentPage.right?.()} $actionable={typeof state.currentPage.right !== 'undefined'}>
                 <i className="material-icons">arrow_right</i>
             </Button>
         </Controller>
