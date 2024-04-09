@@ -2,7 +2,7 @@
     "content" : [
         {
             "title" : "Pixel-Lobster",
-            "description" : "A fun project I started with my friend's help. I combined both my love for pixel art and my goal to get better at front-end development into this nifty little project, using React and Typescript.",
+            "description" : "A fun project I started with my friend's help. I combined my love for pixel art and my goal to get better at front-end development into this little project, using React and Typescript.",
             "link" : "https://pixel-lobster.netlify.app",
             "githubLink" : "https://github.com/vincent-sit/pixel-lobster"
         },
@@ -13,32 +13,8 @@
             "githubLink" : "https://github.com/vincent-sit/portfolio"
         },
         {
-            "title" : "Portfolio2",
-            "description" : "Taking on a retro-gaming vibe, I designed this little portfolio to show off what I have learnt and tell a little story about myself. Hope it does a better job than just my CV!",
-            "link" : "",
-            "githubLink" : "https://github.com/vincent-sit/portfolio"
-        },
-        {
-            "title" : "Portfolio3",
-            "description" : "Taking on a retro-gaming vibe, I designed this little portfolio to show off what I have learnt and tell a little story about myself. Hope it does a better job than just my CV!",
-            "link" : "",
-            "githubLink" : "https://github.com/vincent-sit/portfolio"
-        },
-        {
-            "title" : "Portfolio4",
-            "description" : "Taking on a retro-gaming vibe, I designed this little portfolio to show off what I have learnt and tell a little story about myself. Hope it does a better job than just my CV!",
-            "link" : "",
-            "githubLink" : "https://github.com/vincent-sit/portfolio"
-        },
-        {
-            "title" : "Portfolio5",
-            "description" : "Taking on a retro-gaming vibe, I designed this little portfolio to show off what I have learnt and tell a little story about myself. Hope it does a better job than just my CV!",
-            "link" : "",
-            "githubLink" : "https://github.com/vincent-sit/portfolio"
-        },
-        {
-            "title" : "Portfolio6",
-            "description" : "Taking on a retro-gaming vibe, I designed this little portfolio to show off what I have learnt and tell a little story about myself. Hope it does a better job than just my CV!",
+            "title" : "Ludum Dare 55 - GameJam",
+            "description" : "In a collaboration with a few friends, we are taking part in the celebrated game jam to see what we end up with!",
             "link" : "",
             "githubLink" : "https://github.com/vincent-sit/portfolio"
         }

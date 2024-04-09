@@ -12,7 +12,6 @@ import { installWorkExperience } from './features/work-experience/install';
 const AppWrapper = styled.div`
     display: grid;
     grid-template-rows: 3fr 1fr;
-    position: relative;
     height: 100vh;
     width: 100vw;
     overflow: hidden;

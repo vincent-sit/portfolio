@@ -11,7 +11,7 @@ const Project = styled.div<{$count : number}>`
 `;
 
 const Container = styled.div<{$count : number}>`
-    max-height: 120px;
+    max-height: 110px;
     width: 70vw;
     padding: 50px 10px;
     display: flex;
@@ -20,7 +20,6 @@ const Container = styled.div<{$count : number}>`
     scroll-behavior: smooth;
     transition: all 0.25s ease-in;
     -ms-overflow-style: none;
-    scrollbar-height: none;    
     overflow: hidden;
     scroll-snap-type: y mandatory;
 `;

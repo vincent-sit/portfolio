@@ -3,10 +3,6 @@ import styled from 'styled-components';
 import gamepad from '../../assets/gamepad/gamepad.svg';
 
 const Controller = styled.div`
-    display: flex;
-    flex-direction: row;
-    justify-content: space-between;
-    align-items: center;
     z-index: 1;
     margin: auto;
 `;
@@ -19,7 +15,7 @@ interface ControllerPad {
 export function ControllerPad({ DirectionPad, ActionPad } : ControllerPad) {
     return (
         <Controller>
-            <div style={{position: 'relative', scale: '8'}}>
+            <div style={{position: 'relative', scale: '8', placeSelf: 'center'}}>
                 <img src={gamepad}/>
                 <DirectionPad/>
                 <ActionPad/>

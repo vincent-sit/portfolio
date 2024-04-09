@@ -1,7 +1,7 @@
 import { ProjectState } from './state';
 
-const ITEM_HEIGHT = 120;
-const PADDING = 48;
+const ITEM_HEIGHT = 200;
+const PADDING = 50;
 
 export class ProjectPresenter {
     up(state : ProjectState) {
