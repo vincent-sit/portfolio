@@ -1,14 +1,16 @@
 import React from 'react';
 import styled from 'styled-components';
-import { Button } from '../button/ui';
 import { PageState } from '../../page/state';
+import aButton from '../../../assets/gamepad/a-button.svg';
+import bButton from '../../../assets/gamepad/b-button.svg';
 
-const Controller = styled.div`
+const Pad = styled.div`
     display : grid;
     grid-template-rows : repeat(2, 1fr);
     grid-template-columns : repeat(2, 1fr);
-    width: 100px;
-    height: 100px;
+    position: absolute;
+    top: 8px;
+    right: 3px;
 
     >:nth-child(1) {
         grid-column: 1;
@@ -21,6 +23,20 @@ const Controller = styled.div`
     }
 `;
 
+const ActionButton = styled.button`
+    background-color: transparent;
+    border: none;
+    cursor: pointer;
+    outline: none;
+    padding: 0;
+    font-size: 0;
+
+    &:active
+    {
+        transform: translateY(1px);
+    }
+`;
+
 interface ActionPadProps {
     state : PageState,
     reset: () => void
@@ -28,13 +44,13 @@ interface ActionPadProps {
 
 export function ActionPad({ state, reset } : ActionPadProps) {
     return (
-        <Controller>
-            <Button onClick={() => state.currentPage.confirm?.()} $actionable={typeof state.currentPage.confirm !== 'undefined'}>
-                <i className="material-icons">radio_button_checked</i>
-            </Button>
-            <Button onClick={reset} $actionable={true}>
-                <i className="material-icons">home</i>
-            </Button>
-        </Controller>
+        <Pad>
+            <ActionButton onClick={() => state.currentPage.confirm?.()}>
+                <img src={aButton} alt='upButton'/>
+            </ActionButton>
+            <ActionButton onClick={reset}>
+                <img src={bButton} alt='upButton'/>
+            </ActionButton>
+        </Pad>
     );
 }

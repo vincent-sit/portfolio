@@ -1,23 +1,14 @@
 import React from 'react';
 import styled from 'styled-components';
+import gamepad from '../../assets/gamepad/gamepad.svg';
 
-const ControllerWrapper = styled.div`
+const Controller = styled.div`
     display: flex;
     flex-direction: row;
     justify-content: space-between;
     align-items: center;
-    width: 70vw;
-    background-color: #9682CF;
-    padding: 2rem;
-    boxing-size: border-box;
-    border-radius: 50px; 
-    position: absolute;
-    bottom: 2rem;
-    left: 0; 
-    right: 0; 
-    margin-left: auto; 
-    margin-right: auto; 
     z-index: 1;
+    margin: auto;
 `;
 
 interface ControllerPad {
@@ -27,9 +18,12 @@ interface ControllerPad {
 
 export function ControllerPad({ DirectionPad, ActionPad } : ControllerPad) {
     return (
-        <ControllerWrapper>
-            <DirectionPad/>
-            <ActionPad/>
-        </ControllerWrapper>
+        <Controller>
+            <div style={{position: 'relative', scale: '8'}}>
+                <img src={gamepad}/>
+                <DirectionPad/>
+                <ActionPad/>
+            </div>
+        </Controller>
     );
 }
