@@ -7,7 +7,9 @@ const PageInfo = styled.div`
     transform: scale(1);
     transition: transform 0.5s;
     position: absolute;
-    top: rem;
+    top: 5rem;
+    right : 0;
+    left: 0;
     
     display: flex;
     justify-content: center;
@@ -20,7 +22,7 @@ const Pages = styled.div`
     position: relative;
     filter: drop-shadow(0 0 10px #0003);
     perspective: 100px;
-    height: 300px;
+    height: 500px;
 `;
 
 interface HomePageProps {
@@ -34,7 +36,7 @@ export function HomePage({ pages, pointer } : HomePageProps) {
             {pages.map((page, index) => {
                 return (
                     <PageInfo key={page.name} style={{visibility: pointer === index ? 'visible' : 'hidden'}}>
-                        <img src={page.image} style={{width: '250px'}}/>
+                        <img src={page.image} style={{width: '400px'}}/>
                         {page.name}
                     </PageInfo>
                 );

@@ -2,6 +2,7 @@ import React from 'react';
 import { WorkExperience as InternalWorkExperience } from './work-experience';
 import { Page } from '../base/action';
 import { WorkExperience } from './type';
+import workExperienceImage from '../../assets/work-experience.png';
 
 
 export function installWorkExperience() {
@@ -16,7 +17,7 @@ export function installWorkExperience() {
     const WorkExperiencePage : Page = {
         name : 'work-experience',
         component: Component,
-        image: '',
+        image: workExperienceImage,
     };
 
     return {
