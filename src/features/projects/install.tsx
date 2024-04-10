@@ -12,9 +12,6 @@ export function installProjectsPage() {
     const presenter = new ProjectPresenter();
     const state = createProjectState(projectData);
 
-    const up = () => presenter.up(state);
-    const down = () => presenter.down(state);
-
     const Component = () => {
         return (
             <InternalProjectsPage projects={state.projects}/>
@@ -25,8 +22,11 @@ export function installProjectsPage() {
         name : 'projects',
         component : Component,
         image: projectImage,
-        up : up,
-        down : down
+        up : () => presenter.up(state),
+        down : () => presenter.down(state),
+        left: () => {},
+        right : () => {},
+        confirm: () => {}
     };
 
     return {

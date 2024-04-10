@@ -13,7 +13,7 @@ const GlobalStyle = createGlobalStyle`
     font-style: normal;
     user-select: none;
     -webkit-user-select: none;
-    font-size: 18px;
+    font-size: 20px;
   }
 
   input[type="text"]

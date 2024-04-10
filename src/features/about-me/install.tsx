@@ -13,7 +13,12 @@ export function installAboutMePage() {
     const AboutMePage : Page = {
         name : 'about-me',
         component : Component,
-        image: aboutMeImage
+        image: aboutMeImage,
+        up : () => {},
+        down : () => {},
+        left : () => {},
+        right: () => {},
+        confirm: () => {}
     };
 
     return {

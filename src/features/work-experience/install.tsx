@@ -18,6 +18,10 @@ export function installWorkExperience() {
         name : 'work-experience',
         component: Component,
         image: workExperienceImage,
+        up: () => {},
+        down: () => {},
+        left: () => {},
+        right: () => {}
     };
 
     return {

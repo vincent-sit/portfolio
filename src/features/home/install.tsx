@@ -27,7 +27,9 @@ export function installHomePage(pages : Page[], setCurrentPage : (page : Page) =
         image: '',
         left : left,
         right : right,
-        confirm : confirm
+        confirm : confirm,
+        up: () => {},
+        down : () => {}
     };
 
     return {
