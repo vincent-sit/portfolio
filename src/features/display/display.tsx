@@ -6,6 +6,7 @@ import backgroundFrame from '../../assets/background-frame.svg';
 const DisplayWrapper = styled.div`
     margin: auto;
     justify-self: center;
+    position: relative;
 `;
 
 const Frame = styled.img`
