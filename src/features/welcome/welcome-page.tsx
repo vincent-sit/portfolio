@@ -6,6 +6,7 @@ export function WelcomePage() {
         <div>
             <h1>WELCOME! COME AND PLAY AROUND!</h1>
             <p>PAGE STILL UNDER CONSTRUCTION...</p>
+            <p>MOBILE FRIENDLY VERSION TO BE IMPLEMENTED...</p>
             <p style={{marginBlockStart: '0.8em'}}>Press <img src={aButton} style={{scale: '4', marginLeft: '0.5rem', marginRight: '0.5rem'}}/> to start!</p>
         </div>
     );
