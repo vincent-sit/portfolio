@@ -7,6 +7,7 @@ import { IProject } from './type';
 import { ProjectPresenter } from './presenter';
 import { ProjectState, createProjectState } from './state';
 import { useSnapshot } from 'valtio';
+import { reactToButton } from '../command/utilities';
 
 export function installProjectsPage() {
     const projectData : IProject[] = data.content;
@@ -26,8 +27,8 @@ export function installProjectsPage() {
         image: projectImage,
         up : () => presenter.up(state),
         down : () => presenter.down(state),
-        left: () => {},
-        right : () => {},
+        left: () => { reactToButton(false); },
+        right : () => { reactToButton(false); },
         confirm: () => presenter.confirm(state)
     };
 

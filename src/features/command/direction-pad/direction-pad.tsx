@@ -5,6 +5,9 @@ import upButton from '../../../assets/gamepad/up-button.svg';
 import downButton from '../../../assets/gamepad/down-button.svg';
 import leftButton from '../../../assets/gamepad/left-button.svg';
 import rightButton from '../../../assets/gamepad/right-button.svg';
+import gamepadDefault from '../../../assets/gamepad/gamepad.svg';
+import gamepadGoodIput from '../../../assets/gamepad/gamepad_reaction.svg';
+import gamepadBadInput from '../../../assets/gamepad/gamepad_bad_input.svg';
 
 const Pad = styled.div`
     display : grid;

@@ -2,6 +2,7 @@ import React from 'react';
 import { WelcomePage as InternalWelcomePage } from './welcome-page';
 import { Page } from '../base/action';
 import projectImage from '../../assets/projects.png';
+import { reactToButton } from '../command/utilities';
 
 export function installWelcomePage(HomePage : Page, setCurrentPage : (page : Page) => void) {
     const Component = () => {
@@ -14,7 +15,10 @@ export function installWelcomePage(HomePage : Page, setCurrentPage : (page : Pag
         name : 'projects',
         component : Component,
         image: projectImage,
-        confirm: () => setCurrentPage(HomePage)
+        confirm: () => {
+            setCurrentPage(HomePage);
+            reactToButton(true);
+        }
     };
 
     setCurrentPage(WelcomePage);

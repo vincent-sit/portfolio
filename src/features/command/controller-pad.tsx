@@ -16,7 +16,7 @@ export function ControllerPad({ DirectionPad, ActionPad } : ControllerPad) {
     return (
         <Controller>
             <div style={{position: 'relative', scale: '8', placeSelf: 'center'}}>
-                <img src={gamepad}/>
+                <img src={gamepad} id='controller-pad-img'/>
                 <DirectionPad/>
                 <ActionPad/>
             </div>

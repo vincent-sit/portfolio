@@ -1,14 +1,26 @@
+import { reactToButton } from '../command/utilities';
 import { ProjectState } from './state';
 
+
 export class ProjectPresenter {
-    up(state : ProjectState) {
-        if (state.currentPointer <= 0) return;
-        state.currentPointer--;
+    async up(state : ProjectState) {
+        let validInput = false;
+        if (state.currentPointer > 0) {
+            state.currentPointer--;
+            validInput = true;
+        }
+
+        reactToButton(validInput);
     }
 
     down(state : ProjectState) {
-        if (state.currentPointer >= state.projects.length - 1) return;
-        state.currentPointer++;
+        let validInput = false;
+        if (state.currentPointer < state.projects.length - 1) {
+            state.currentPointer++;
+            validInput = true;
+        }
+
+        reactToButton(validInput);
     }
 
     confirm(state : ProjectState) {
@@ -18,5 +30,6 @@ export class ProjectPresenter {
             return;
         }
         window.open(url, '_blank')?.focus();
+        reactToButton(true);
     }
 }
