@@ -31,6 +31,9 @@ const ActionButton = styled.button`
     padding: 0;
     font-size: 0;
 
+    -webkit-tap-highlight-color: transparent;
+    -webkit-tap-highlight-color: rgba(0, 0, 0, 0);
+
     &:active
     {
         transform: translateY(1px);
