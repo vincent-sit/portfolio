@@ -1,16 +1,20 @@
 import React from 'react';
 import { WorkExperience as InternalWorkExperience } from './work-experience';
 import { Page } from '../base/action';
-import { WorkExperience } from './type';
+import data from './data.json';
+import { WorkExperience, WorkExperienceCategory } from './type';
 import workExperienceImage from '../../assets/work-experience.png';
-
+import { WorkExperienceState, createWorkExperienceState } from './state';
+import { useSnapshot } from 'valtio';
 
 export function installWorkExperience() {
-    const workExperiences : WorkExperience[] = [];
+    const workExperiences : WorkExperienceCategory[] = data.workExperience;
+    const state = createWorkExperienceState(workExperiences);
 
     const Component = () => {
+        const snap = useSnapshot(state);
         return (
-            <InternalWorkExperience/>
+            <InternalWorkExperience state={snap as WorkExperienceState}/>
         );
     };
 

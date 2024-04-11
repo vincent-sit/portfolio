@@ -1,5 +1,7 @@
 import React from 'react';
 import styled from 'styled-components';
+import { WorkExperienceState } from './state';
+import { ItemGrid } from './item-block';
 
 const Item = styled.div`
     display: flex;
@@ -10,19 +12,30 @@ const Item = styled.div`
 `;
 
 const Inventory = styled.div`
-    display: flex;
-    flex-direction: column;
-    overflow-y: scroll;
-    scroll-snap-type: y mandatory;
+    display: grid;
+    grid-template-columns: 3fr 2fr;
+    width: 70vw;
 `;
 
-export function WorkExperience() {
+const InfoScreen = styled.div`
+    background-color: pink;
+`;
+
+// const ItemGrid = styled.div`
+//     background-color: cyan;
+// `;
+
+interface WorkExperienceProps {
+    state : WorkExperienceState
+}
+
+export function WorkExperience({ state } : WorkExperienceProps) {
     return (
         <Inventory>
-            <Item>ASB</Item>
-            <Item>PWC</Item>
-            <Item>Rialto</Item>
-            <Item>Research Assistant</Item>
+            <ItemGrid categories={state.workExperiences}/>
+            <InfoScreen>
+
+            </InfoScreen>
         </Inventory>
     );
 }

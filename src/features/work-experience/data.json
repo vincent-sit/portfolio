@@ -1,0 +1,61 @@
+{
+    "workExperience" : [
+        {
+            "type" : "Professional Experience",
+            "content": [
+                {
+                    "displayText": "PwC New Zealand",
+                    "role": "Tax Consultant",
+                    "tenure" : "2021 - 2023",
+                    "content" : "I have spent this many years in PwC",
+                    "icon" : "/src/assets/work-experience-items/item-icon-back.svg"
+                },
+                {
+                    "displayText": "ASB",
+                    "role" : "Junior Software Engineer",
+                    "tenure" : "2023 - present",
+                    "content" : "I have spent this many years in PwC",
+                    "icon" : "/assets/work-experience-items/item-icon-back.svg"
+                },
+                {
+                    "displayText": "University of Auckland",
+                    "role" : "Legal Research Assistant",
+                    "tenure" : "Summer 2019 -2020",
+                    "content" : "I have spent this many years in PwC",
+                    "icon" : "../../assets/work-experience-items/item-icon-back.svg"
+                }
+            ]
+        },
+        {
+            "type": "Volunteering",
+            "content" : [
+                {
+                    "displayText": "St John Youth",
+                    "role" : "Assistant Division Manager",
+                    "tenure" : "2015 - 2019",
+                    "content" : "I have spent this many years in PwC",
+                    "icon" : "../../assets/work-experience-items/item-icon-back.svg"
+                }
+            ]
+        },
+        {
+            "type" : "Part Time",
+            "content" : [
+                {
+                    "displayText": "Rialto Cinemas",
+                    "role" : "Duty Manager",
+                    "tenure": "2015 - 2018",
+                    "content" : "I have spent this many years in PwC",
+                    "icon" : "../../assets/work-experience-items/item-icon-back.svg"
+                },
+                {
+                    "displayText": "Domain Name Commission",
+                    "role" : "Part Time Project Officer",
+                    "tenure" : "2020 - 2021",
+                    "content" : "I have spent this many years in PwC",
+                    "icon" : "../../assets/work-experience-items/item-icon-back.svg"
+                }
+            ]
+        }
+    ]
+}

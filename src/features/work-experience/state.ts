@@ -1,18 +1,23 @@
 import { proxy } from 'valtio';
-import { WorkExperience } from './type';
+import { WorkExperienceCategory } from './type';
 
 export class WorkExperienceState {
-    workExperiences : WorkExperience[];
+    workExperiences : WorkExperienceCategory[];
 
-    constructor(workExperiences : WorkExperience[]) {
+    constructor(workExperiences : WorkExperienceCategory[]) {
         this.workExperiences = workExperiences;
     }
     
-    pointer : number = -1;
+    rowPointer : number = -1;
+    colPointer : number = -1;
 }
 
-export function createWorkExperienceState(experiences : WorkExperience[]) {
+export function createWorkExperienceState(experiences : WorkExperienceCategory[]) {
     const state = new WorkExperienceState(experiences);
-    if (experiences.length > 0) state.pointer = 0;
+    if (experiences.length > 0) {
+        state.rowPointer = 0;
+        state.colPointer = 0;
+    }
+
     return proxy(state);
 }
