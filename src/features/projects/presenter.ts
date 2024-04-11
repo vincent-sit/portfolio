@@ -1,20 +1,22 @@
 import { ProjectState } from './state';
 
-const ITEM_HEIGHT = 200;
-const PADDING = 50;
-
 export class ProjectPresenter {
     up(state : ProjectState) {
-        const list = document.getElementById('project-list');
-        if (state.currentPointer <= 0 || !list) return;
-        list.scrollTop -= ITEM_HEIGHT + PADDING;
+        if (state.currentPointer <= 0) return;
         state.currentPointer--;
     }
 
     down(state : ProjectState) {
-        const list = document.getElementById('project-list');
-        if (state.currentPointer >= state.projects.length - 1 || !list) return;
-        list.scrollTop += ITEM_HEIGHT + PADDING;
+        if (state.currentPointer >= state.projects.length - 1) return;
         state.currentPointer++;
-    } 
+    }
+
+    confirm(state : ProjectState) {
+        const url = state.projects[state.currentPointer].link;
+        if (!url) {
+            alert('Not yet implemented');
+            return;
+        }
+        window.open(url, '_blank')?.focus();
+    }
 }

@@ -5,7 +5,8 @@ import projectImage from '../../assets/projects.png';
 import data from './data.json';
 import { IProject } from './type';
 import { ProjectPresenter } from './presenter';
-import { createProjectState } from './state';
+import { ProjectState, createProjectState } from './state';
+import { useSnapshot } from 'valtio';
 
 export function installProjectsPage() {
     const projectData : IProject[] = data.content;
@@ -13,8 +14,9 @@ export function installProjectsPage() {
     const state = createProjectState(projectData);
 
     const Component = () => {
+        const snap = useSnapshot(state);
         return (
-            <InternalProjectsPage projects={state.projects}/>
+            <InternalProjectsPage state={snap as ProjectState}/>
         );
     };
 
@@ -26,7 +28,7 @@ export function installProjectsPage() {
         down : () => presenter.down(state),
         left: () => {},
         right : () => {},
-        confirm: () => {}
+        confirm: () => presenter.confirm(state)
     };
 
     return {

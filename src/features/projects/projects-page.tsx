@@ -3,8 +3,9 @@ import styled from 'styled-components';
 import { IProject } from './type';
 import aButton from '../../assets/gamepad/a-button.svg';
 import projectFrame from '../../assets/project-frame.svg';
+import { ProjectState } from './state';
 
-const Project = styled.div<{$count : number}>`
+const Project = styled.div<{$count : number, $selected : boolean}>`
     scroll-snap-align: center;
     max-width: 1300px;
     height: 280px;
@@ -14,6 +15,8 @@ const Project = styled.div<{$count : number}>`
     box-sizing: border-box;
     width: 72vw;
     position: relative;
+    scale: ${props => props.$selected ? '1.02' : '1'};
+    filter: ${props => props.$selected ? 'brightness(1)' : 'brightness(0.9)'};
 `;
 
 const Container = styled.div<{$count : number}>`
@@ -31,16 +34,15 @@ const Container = styled.div<{$count : number}>`
 `;
 
 interface ProjectsPageProps {
-    projects : IProject[]
+    state : ProjectState
 }
 
-export function ProjectsPage({projects} : ProjectsPageProps) {
+export function ProjectsPage({state} : ProjectsPageProps) {
     return (
-        <Container id={'project-list'} $count={projects.length}>
-            {projects.map((project) => {
+        <Container id={'project-list'} $count={state.projects.length}>
+            {state.projects.map((project, index) => {
                 return (
-                    <Project key={project.title} $count={projects.length}>
-                        {/* <img src={projectFrame} style={{scale: '4', position: 'absolute', top: '65px', left: '364px', right: '0', bottom: '0'}}/> */}
+                    <Project key={project.title} $count={state.projects.length} $selected={state.currentPointer == index}>
                         <h1 style={{marginBlockStart: '0.3em'}}>{project.title}</h1>
                         <p style={{height: '40px', marginBlockEnd: '0.4em'}}>{project.description}</p>
                         <p style={{marginBlockStart: '0.8em'}}>Press <img src={aButton} style={{scale: '4', marginLeft: '0.5rem', marginRight: '0.5rem'}}/> to go to the {project.linkDestination}</p>
